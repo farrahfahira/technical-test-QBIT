@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 header {
@@ -59,6 +59,8 @@ nav ul li a {
 .content {
   text-align: left;
   width: 450px;
+  margin-top: 125px;
+  margin-bottom: 65px;
 }
 
 .content h2 {
@@ -68,6 +70,7 @@ nav ul li a {
 }
 
 .btn {
+  font-family: "Montserrat", sans-serif;
   display: inline-block;
   padding: 12px 60px;
   background-color: #05be70;
@@ -75,6 +78,43 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   border-radius: 20px;
+}
+
+#menu-variants {
+  text-align: center;
+}
+
+.text-content {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.text-content h2 {
+  font-size: 32px;
+  color: #14433d;
+}
+
+.text-content h2,
+.text-content p {
+  text-align: center;
+}
+
+.text-content .btn {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.carousel {
+  white-space: nowrap;
+}
+
+.carousel IMG {
+  width: calc(100% / 3);
+}
+
+#place-and-contact {
+  background-color: #ffc0e6;
+  height: 100vh;
 }
 
 footer {
