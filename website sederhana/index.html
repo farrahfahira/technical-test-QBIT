@@ -5,27 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frosty Delights</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   </head>
   <body>
     <header>
+      <div class="logo">
+        <h2>Frosty Delights</h2>
+      </div>
       <nav>
-        <div class="logo">
-          <h2>Frosty Delights</h2>
-        </div>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="account">
+        <h5>akun</h5>
+      </div>
     </header>
 
     <section class="hero-section">
       <div class="decorative-circle">
         <img src="img/Elena_Koycheva-removebg-preview.png" alt="Image" class="circle-image" />
       </div>
+      <div class="mini-icecream">
+        <img src="img/ice cream cone.png" alt="" class="verse-1 a" />
+        <img src="img/ice cream cone.png" alt="" class="verse-1 b" />
+        <img src="img/ice cream cone.png" alt="" class="verse-2" />
+        <img src="img/ice cream cone.png" alt="" class="verse-3" />
+        <img src="img/ice cream cone.png" alt="" class="verse-4 a" />
+        <img src="img/ice cream cone.png" alt="" class="verse-4 b" />
+        <img src="img/ice cream cone.png" alt="" class="verse-4 c" />
+      </div>
       <div class="content">
+        <p>Made with love and natural ingredients</p>
         <h2>Satisfy your sweet tooth with nutritious bliss</h2>
         <a href="#" class="btn">Shop Now</a>
       </div>
@@ -38,11 +54,21 @@
         <a href="#" class="btn">See All Variants</a>
       </div>
       <div class="carousel">
-        <img src="img/strawberry_ice_cream.png" alt="" />
-        <img src="img/strawberry_ice_cream.png" alt="" />
-        <img src="img/strawberry_ice_cream.png" alt="" />
-        <img src="img/strawberry_ice_cream.png" alt="" />
-        <img src="img/strawberry_ice_cream.png" alt="" />
+        <div class="carousel-wrapper">
+          <img src="img/strawberry_ice_cream.png" alt="" />
+          <img src="img/strawberry_ice_cream.png" alt="" />
+          <img src="img/ice_chocolate.png" alt="" />
+          <img src="img/strawberry_ice_cream.png" alt="" />
+          <img src="img/strawberry_ice_cream.png" alt="" />
+          <img src="img/strawberry_ice_cream.png" alt="" />
+
+          <img src="img/strawberry_ice_cream.png" alt="" />
+          <img src="img/strawberry_ice_cream.png" alt="" />
+          <img src="img/strawberry_ice_cream.png" alt="" />
+          <img src="img/strawberry_ice_cream.png" alt="" />
+        </div>
+        <button class="carousel-scroll prev" onClick="scrollCarousel('prev')">&#8249;</button>
+        <button class="carousel-scroll next" onClick="scrollCarousel('next')">&#8250;</button>
       </div>
     </section>
 
@@ -56,5 +82,7 @@
     <footer>
       <p>&copy; 2023 Frosty Delight. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

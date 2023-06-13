@@ -1,22 +1,24 @@
 body {
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
 }
+
+/* header */
 
 header {
   background-color: #fffce2;
   padding-left: 70px;
   padding-right: 70px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 100;
 }
 
 nav {
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  margin-right: -620px;
 }
 
 nav ul {
@@ -25,7 +27,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 7px;
+  margin: 12px;
 }
 
 nav ul li a {
@@ -33,15 +35,25 @@ nav ul li a {
   color: #14433d;
 }
 
+nav ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 12px;
+}
+
+/* end of header */
+
+/* hero section */
+
 .hero-section {
   background-color: #fffce2;
   position: relative;
   padding: 100px 70px;
+  overflow: hidden;
 }
 
 .decorative-circle {
   position: absolute;
-  top: -500px;
+  top: -400px;
   right: -240px;
   width: 800px;
   height: 800px;
@@ -52,33 +64,93 @@ nav ul li a {
 
 .circle-image {
   position: absolute;
-  top: 550px;
-  right: 240px;
+  top: 440px;
+  right: 200px;
 }
 
 .content {
   text-align: left;
-  width: 450px;
+  width: 650px;
   margin-top: 125px;
-  margin-bottom: 65px;
+  margin-bottom: 140px;
+}
+
+.content p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  margin-bottom: -12px;
 }
 
 .content h2 {
-  color: #05be70;
-  font-size: 62px;
-  margin-bottom: 25px;
+  font-family: "Libre Baskerville", serif;
+  color: #0c7448;
+  font-size: 45px;
+  margin-bottom: 45px;
 }
 
 .btn {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
+  font-family: "Josefin Sans", sans-serif;
   padding: 12px 60px;
-  background-color: #05be70;
+  background-color: #0c7448;
   color: #fffce2;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 20px;
 }
+
+.btn:hover {
+  background-color: #073e27;
+}
+
+.mini-icecream img {
+  position: absolute;
+}
+
+.mini-icecream .verse-1 {
+  transform: rotate(27.93deg);
+}
+
+.mini-icecream .verse-1.a {
+  left: 78px;
+  top: 48px;
+}
+
+.mini-icecream .verse-1.b {
+  left: 850px;
+  top: 537px;
+}
+
+.mini-icecream .verse-2 {
+  transform: rotate(-70.15deg);
+  left: 278.86px;
+  top: 80px;
+}
+
+.mini-icecream .verse-3 {
+  transform: rotate(39.44deg);
+  left: 310px;
+  top: 490px;
+}
+
+.mini-icecream .verse-4 {
+  transform: rotate(-22.88deg);
+}
+
+.mini-icecream .verse-4.a {
+  left: 510px;
+  top: 68px;
+}
+
+.mini-icecream .verse-4.b {
+  left: 50px;
+  top: 537px;
+}
+
+.mini-icecream .verse-4.c {
+  left: 590px;
+  top: 400px;
+}
+
+/* end of hero section */
 
 #menu-variants {
   text-align: center;
@@ -105,11 +177,42 @@ nav ul li a {
 }
 
 .carousel {
-  white-space: nowrap;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-.carousel IMG {
-  width: calc(100% / 3);
+.carousel .carousel-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease;
+  width: 200%;
+}
+
+.carousel img {
+  flex: 0 0 calc(100% / 3);
+  max-width: 100%;
+  margin: 0 10px;
+}
+
+.carousel-scroll {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+.carousel-scroll.prev {
+  left: 10px;
+}
+
+.carousel-scroll.next {
+  right: 10px;
 }
 
 #place-and-contact {
