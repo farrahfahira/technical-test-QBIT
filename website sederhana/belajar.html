@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="belajar.css" />
+  </head>
+  <body>
+    <section id="first">
+      <h1>first section</h1>
+    </section>
+    <section id="second">
+      <h1>second section</h1>
+    </section>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Question 1</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Answer 1</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Question 2</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Answer 2</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Question 3</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Answer 3</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const accordionItems = document.querySelectorAll(".accordion-item");
+
+      accordionItems.forEach((item) => {
+        const header = item.querySelector(".accordion-header");
+
+        header.addEventListener("click", () => {
+          item.classList.toggle("accordion-open");
+
+          // Menutup item accordion lain saat satu item dibuka
+          if (item.classList.contains("accordion-open")) {
+            closeOtherItems(item);
+          }
+        });
+      });
+
+      function closeOtherItems(currentItem) {
+        accordionItems.forEach((item) => {
+          if (item !== currentItem && item.classList.contains("accordion-open")) {
+            item.classList.remove("accordion-open");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

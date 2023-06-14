@@ -13,23 +13,26 @@
   <body>
     <header>
       <div class="logo">
-        <h2>Frosty Delights</h2>
+        <a href="#">Frosty Delights</a>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="account">
-        <h5>akun</h5>
+      <div class="navbar-account">
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="account">
+          <img src="img/account.png" alt="" class="account-icon" />
+        </div>
       </div>
     </header>
 
     <section class="hero-section">
       <div class="decorative-circle">
         <img src="img/Elena_Koycheva-removebg-preview.png" alt="Image" class="circle-image" />
+        <img src="img/Elena_Koycheva-removebg-preview.png" alt="Image" class="circle-image rotated" />
       </div>
       <div class="mini-icecream">
         <img src="img/ice cream cone.png" alt="" class="verse-1 a" />
@@ -61,7 +64,6 @@
           <img src="img/strawberry_ice_cream.png" alt="" />
           <img src="img/strawberry_ice_cream.png" alt="" />
           <img src="img/strawberry_ice_cream.png" alt="" />
-
           <img src="img/strawberry_ice_cream.png" alt="" />
           <img src="img/strawberry_ice_cream.png" alt="" />
           <img src="img/strawberry_ice_cream.png" alt="" />
@@ -72,17 +74,96 @@
       </div>
     </section>
 
-    <section id="place-and-contact">
-      <div class="img"></div>
-      <div class="text">
-        <h3>visit our store and eat your ice cream..</h3>
+    <section id="place">
+      <div class="content">
+        <div class="img">
+          <img src="img/shop.png" alt="" />
+        </div>
+        <div class="text">
+          <h2>Unleash your taste buds with a visit to our whimsical ice cream haven.</h2>
+          <p>123 Main Street, New York, NY 10001, USA</p>
+          <p>Call: 123-477-923</p>
+        </div>
+      </div>
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#FFC0E6"
+            fill-opacity="1"
+            d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,117.3C672,96,768,96,864,128C960,160,1056,224,1152,224C1248,224,1344,160,1392,128L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+          ></path>
+        </svg>
       </div>
     </section>
 
-    <footer>
-      <p>&copy; 2023 Frosty Delight. All rights reserved.</p>
-    </footer>
+    <section id="faq">
+      <div class="title">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-accordion">
+        <div class="img">
+          <img src="img/ice cream jar moсkup with wooden spoon.png" alt="" />
+        </div>
+        <ul id="accordion">
+          <li>
+            <label for="first">What flavors of ice cream do you offer? <span>&#x3e;</span></label>
+            <input type="radio" name="accordion" id="first" checked />
+            <div class="content">
+              <p>We offer a wide range of flavors, including classic favorites such as vanilla, chocolate, and strawberry, as well as unique options like mint chocolate chip, cookies and cream, and rocky road.</p>
+            </div>
+          </li>
+          <li>
+            <label for="second">Do you have any dairy-free or vegan ice cream options? <span>&#x3e;</span></label>
+            <input type="radio" name="accordion" id="second" />
+            <div class="content">
+              <p>Yes, we understand the importance of catering to different dietary preferences. We offer a variety of dairy-free and vegan ice cream options made from plant-based milk, such as almond milk, coconut milk, and soy milk.</p>
+            </div>
+          </li>
+          <li>
+            <label for="third">Can I place a custom order for a specific ice cream flavor? <span>&#x3e;</span></label>
+            <input type="radio" name="accordion" id="third" />
+            <div class="content">
+              <p>
+                Absolutely! We accept custom orders for special events or personal preferences. Just reach out to our customer service team, and we will be happy to discuss the details and accommodate your request to the best of our
+                ability.
+              </p>
+            </div>
+          </li>
+          <li>
+            <label for="fourth">Are there any gluten-free ice cream choices available? <span>&#x3e;</span></label>
+            <input type="radio" name="accordion" id="fourth" />
+            <div class="content">
+              <p>
+                Yes, we offer several gluten-free ice cream options. These flavors are made without any gluten-containing ingredients and are suitable for individuals with gluten intolerance or celiac disease. Please check our menu or
+                inquire with our staff for specific gluten-free flavor options.
+              </p>
+            </div>
+          </li>
+          <li>
+            <label for="fifth">Do you offer ice cream catering services for events? <span>&#x3e;</span></label>
+            <input type="radio" name="accordion" id="fifth" />
+            <div class="content">
+              <p>
+                Yes, we provide ice cream catering services for various events, including parties, weddings, and corporate functions. Our catering menu offers a selection of ice cream flavors, toppings, and serving options. Contact our
+                catering department for more information and to discuss your specific event requirements.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <script src="script.js"></script>
+    <script>
+      const accordionItems = document.querySelectorAll("#accordion li");
+
+      accordionItems.forEach((item) => {
+        const label = item.querySelector("label");
+
+        label.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>

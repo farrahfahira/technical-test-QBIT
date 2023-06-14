@@ -1,0 +1,58 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+}
+
+#first {
+  background-color: aquamarine;
+}
+
+#second {
+  margin-top: -12px;
+  background-color: brown;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f0ae;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.accordion-header h3 {
+  margin: 0;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 10px;
+  background-color: #f8f0ae;
+  border-radius: 8px;
+}
+
+.accordion-open .accordion-content {
+  max-height: 500px; /* Sesuaikan dengan ketinggian maksimum konten */
+}
+
+.accordion-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-open .accordion-icon {
+  transform: rotate(45deg);
+}

@@ -7,23 +7,36 @@ body {
 
 header {
   background-color: #fffce2;
-  padding-left: 70px;
-  padding-right: 70px;
-  position: relative;
+  padding: 0 70px 0 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 90vw;
   z-index: 100;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+
+.navbar-account {
+  display: flex;
+  align-items: center;
 }
 
 nav {
   font-family: "Josefin Sans", sans-serif;
-  margin-right: -620px;
+  margin-right: 12px;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
+  padding: 0;
 }
 
 nav ul li {
@@ -47,41 +60,48 @@ nav ul li a:hover {
 .hero-section {
   background-color: #fffce2;
   position: relative;
-  padding: 100px 70px;
+  padding: 120px 70px;
   overflow: hidden;
 }
 
-.decorative-circle {
+.hero-section .decorative-circle {
   position: absolute;
   top: -400px;
   right: -240px;
-  width: 800px;
-  height: 800px;
+  width: 810px;
+  height: 810px;
   background-color: #ffc0e6;
   border-radius: 50%;
   z-index: 1;
 }
 
-.circle-image {
+.hero-section .circle-image {
   position: absolute;
   top: 440px;
   right: 200px;
 }
 
-.content {
+.hero-section .circle-image.rotated {
+  transform: rotate(180deg);
+  top: 400px;
+  right: 390px;
+  object-fit: cover;
+}
+
+.hero-section .content {
   text-align: left;
   width: 650px;
   margin-top: 125px;
   margin-bottom: 140px;
 }
 
-.content p {
+.hero-section .content p {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   margin-bottom: -12px;
 }
 
-.content h2 {
+.hero-section .content h2 {
   font-family: "Libre Baskerville", serif;
   color: #0c7448;
   font-size: 45px;
@@ -97,7 +117,7 @@ nav ul li a:hover {
   border-radius: 20px;
 }
 
-.btn:hover {
+.hero-section .content .btn:hover {
   background-color: #073e27;
 }
 
@@ -111,24 +131,24 @@ nav ul li a:hover {
 
 .mini-icecream .verse-1.a {
   left: 78px;
-  top: 48px;
+  top: 80px;
 }
 
 .mini-icecream .verse-1.b {
   left: 850px;
-  top: 537px;
+  top: 580px;
 }
 
 .mini-icecream .verse-2 {
   transform: rotate(-70.15deg);
   left: 278.86px;
-  top: 80px;
+  top: 112px;
 }
 
 .mini-icecream .verse-3 {
   transform: rotate(39.44deg);
   left: 310px;
-  top: 490px;
+  top: 533px;
 }
 
 .mini-icecream .verse-4 {
@@ -137,26 +157,29 @@ nav ul li a:hover {
 
 .mini-icecream .verse-4.a {
   left: 510px;
-  top: 68px;
+  top: 102px;
 }
 
 .mini-icecream .verse-4.b {
   left: 50px;
-  top: 537px;
+  top: 580px;
 }
 
 .mini-icecream .verse-4.c {
   left: 590px;
-  top: 400px;
+  top: 443px;
 }
 
 /* end of hero section */
 
 #menu-variants {
   text-align: center;
+  position: relative;
+  height: 500px;
 }
 
 .text-content {
+  font-family: "Josefin Sans", sans-serif;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -179,7 +202,7 @@ nav ul li a:hover {
 .carousel {
   display: flex;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   width: 100%;
 }
 
@@ -215,13 +238,123 @@ nav ul li a:hover {
   right: 10px;
 }
 
-#place-and-contact {
+#place {
   background-color: #ffc0e6;
-  height: 100vh;
+}
+
+#place .content {
+  display: flex;
+}
+
+#place .content .img,
+#place .content .text {
+  flex: 1;
+  position: relative;
+  margin-top: 500px;
+  margin-bottom: 200px;
+}
+
+#place .content .text {
+  margin-right: 90px;
+}
+
+#place .content .text h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+#place .content .text p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+#place .content .img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#place .wave {
+  background-color: #fffce2;
+}
+
+/* end of place section */
+
+/* FAQ section */
+
+#faq {
+  background-color: #fffce2;
+  margin-top: -100px;
+}
+
+#faq .faq-accordion {
+  display: flex;
+}
+
+#faq .faq-accordion .img {
+  flex: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#faq .faq-accordion #accordion {
+  margin: 100px auto;
+  width: 600px;
+}
+
+#faq .faq-accordion #accordion li {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 18px;
+  background: #f8f0ae;
+  padding: 10px 18px 10px 18px;
+  border-radius: 8px;
+}
+
+#faq .faq-accordion #accordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#faq .faq-accordion #accordion li span {
+  transform: rotate(90deg);
+  font-size: 28px;
+  color: blackm;
+}
+
+#faq .faq-accordion #accordion li .content {
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  font-weight: 300;
+  text-align: justify;
+}
+
+#accordion label + input[type="radio"] {
+  display: none;
+}
+
+/* #accordion label + input[type="radio"]:checked + .content {
+  max-height: 400px;
+} */
+
+#accordion li.active + label + input[type="radio"] + .content {
+  max-height: 500px; /* Sesuaikan dengan ketinggian maksimum konten */
 }
 
 footer {
-  background-color: #333;
+  background-color: #0c7448;
   color: #fff;
   padding: 20px;
   text-align: center;
